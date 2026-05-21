@@ -1,0 +1,49 @@
+body{
+    background-image: url(/projeto.pagina.2/StockCake-Sonhos_de_Montanha_Estrelada-2261399-standard.jpg);
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.perguntas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+    margin-bottom: 12px;
+}
+
+.perguntas label {
+    font-size: 20px;
+    background-color: aliceblue;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 4px;
+}
+
+input{
+    width: 400px;
+    height: 200px;
+
+}
+
+.box {
+    border: solid 5px #aebbbb;
+    width: 490px;
+    height: 450px;
+    background-color: rgb(211, 234, 247);
+}
+
+h1 {
+    background-color: #f3fafa;
+    padding: 8px;
+    border-radius: 7px;
+    border: solid 3px #aebbbb ;
+
+}
