@@ -1,4 +1,4 @@
-@import url(/imgs/PressStart2P-Regular.ttf); 
+
 
 body{
    background-color: rgb(42, 42, 42);
@@ -70,7 +70,6 @@ button{
     margin-top: 10px;
     background-color: rgb(45, 55, 114);
     color: white;
-    font-family: 'PressStart2P-Regular';
     font-size: 16px;
     margin-bottom: 8px;
 }
