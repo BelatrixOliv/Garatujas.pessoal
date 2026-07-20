@@ -14,4 +14,5 @@ const perguntas = [
     perguntaLabel.innerText = perguntas[perguntaAtual];
     perguntaAtual++;
  } 
+ pronto.addEventListener('click',perguntasDolabel)
  perguntasDolabel();
