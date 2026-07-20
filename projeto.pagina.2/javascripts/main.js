@@ -1,14 +1,19 @@
-const textoDousuario = document.getElementById("perg")
-const botaoPronto = document.getElementById("pronto")
-const caixaDogato = document.querySelector(".box")
+const textarea = document.querySelector('.resposta');
+const pronto = document.getElementById('pronto');
 
-console.log(textoDousuario)
-console.log(botaoPronto)
-console.log(caixaDogato)
+function respostaPergunta1(){
+   const resposta = textarea.value;
 
-botaoPronto.addEventListener('click', function(){
-    let codigoDigitado = textoDousuario.value
-    console.log(codigoDigitado)
-})
+    if(resposta=="1"){
+        alert("boa")
+    }
+}
+
+pronto.addEventListener('click',respostaPergunta1);
+
+console.log(textarea)
+console.log(pronto)
+
+//astolfo
 
 
