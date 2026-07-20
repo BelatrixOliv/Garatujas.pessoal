@@ -1,19 +1,17 @@
 const textarea = document.querySelector('.resposta');
 const pronto = document.getElementById('pronto');
+const perguntaLabel = document.querySelector('label');
+const box = document.querySelector('.box');
 
-function respostaPergunta1(){
-   const resposta = textarea.value;
+const perguntas = [
+    "Adicione um nome para seu gatinho usando a tag h1",
+    "Mude a cor do nome agora usando css",
+    "Mude a cor do fundo com css",
+]
+ let perguntaAtual = 0;
 
-    if(resposta=="1"){
-        alert("boa")
-    }
-}
-
-pronto.addEventListener('click',respostaPergunta1);
-
-console.log(textarea)
-console.log(pronto)
-
-//astolfo
-
-
+ function perguntasDolabel(){
+    perguntaLabel.innerText = perguntas[perguntaAtual];
+    perguntaAtual++;
+ } 
+ perguntasDolabel();
