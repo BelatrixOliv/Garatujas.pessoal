@@ -3,17 +3,27 @@ const textarea = document.querySelector('.resposta');
 const pronto = document.getElementById('pronto');
 const labelperg = document.querySelector('label');
 const box = document.querySelector('.box');
+const iniciar = document.getElementById('iniciar')
 
-const perguntas = [
-    "Adicione um nome para seu gatinho usando a tag h1",
-    "Mude a cor do nome agora usando css",
-    "Mude a cor do fundo com css",
+const totalDePerguntas = [
+    "Adicione um nome para seu gatinho usando a tag h1", //0
+    "Mude a cor do nome agora usando css",//1
+    "Mude a cor do fundo com css",//2
 ]
- let perguntaAtual = 0;
+let numeroDaPergunta = 0;
+//------------------------------------------------- codigos 
 
- function perguntasDolabel(){
-    perguntaLabel.innerText = perguntas[perguntaAtual];
-    perguntaAtual++;
- } 
- pronto.addEventListener('click',perguntasDolabel)
- perguntasDolabel();
+
+
+function mudarPergunta() {
+    if (numeroDaPergunta >= totalDePerguntas.length) {
+        numeroDaPergunta = 0;
+    } else {
+        labelperg.innerText = totalDePerguntas[numeroDaPergunta];
+        numeroDaPergunta++;
+    }
+
+}
+
+pronto.addEventListener('click', mudarPergunta)
+mudarPergunta();
