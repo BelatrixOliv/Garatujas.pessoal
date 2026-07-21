@@ -8,11 +8,15 @@ const perguntas = [
     "Mude a cor do nome agora usando css",
     "Mude a cor do fundo com css",
 ]
- let perguntaAtual = 0;
+let perguntaAtual = 0;
 
- function perguntasDolabel(){
-    perguntaLabel.innerText = perguntas[perguntaAtual];
-    perguntaAtual++;
- } 
- pronto.addEventListener('click',perguntasDolabel)
- perguntasDolabel();
+while (perguntaAtual <= 3) {
+    function perguntasDolabel() {
+        perguntaLabel.innerText = perguntas[perguntaAtual];
+        perguntaAtual++;
+    }
+
+}
+
+pronto.addEventListener('click', perguntasDolabel)
+perguntasDolabel();
