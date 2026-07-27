@@ -6,24 +6,25 @@ const box = document.querySelector('.box');
 const iniciar = document.getElementById('iniciar')
 
 const totalDePerguntas = [
-    "Adicione um nome para seu gatinho usando a tag h1", //0
-    "Mude a cor do nome agora usando css",//1
-    "Mude a cor do fundo com css",//2
+    "Primeiro, digite um nome para o seu gatinho",//0
+    "agora transforme esse nome em um titulo principal",//1 
 ]
 let numeroDaPergunta = 0;
 //------------------------------------------------- codigos 
 
 
 
-function mudarPergunta() {
+function mudarPerguntaEverificar() {
     if (numeroDaPergunta >= totalDePerguntas.length) {
         numeroDaPergunta = 0;
-    } else {
+    } else if (numeroDaPergunta) {
         labelperg.innerText = totalDePerguntas[numeroDaPergunta];
         numeroDaPergunta++;
     }
 
+
+
 }
 
-pronto.addEventListener('click', mudarPergunta)
-mudarPergunta();
+pronto.addEventListener('click', mudarPerguntaEverificar)
+mudarPerguntaEverificar();
