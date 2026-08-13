@@ -22,7 +22,8 @@ function gerenciarPerguntas() {
 
     if (respostaDousuario === "") {
         alert("Voce esqueceu de digitar!")
-    }
+        
+    } 
 
     if (etapaAtual === 0) {
 
@@ -48,6 +49,7 @@ function gerenciarPerguntas() {
             alert("muito bem!")
         }
     }
+    
     
 }
 

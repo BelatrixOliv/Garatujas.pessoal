@@ -1,0 +1,167 @@
+* {
+  overflow: hidden;
+
+}
+
+@font-face {
+  font-family: 'Cat Regular';
+  src: url('./fontes-texto/Cat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CatsFont Regular';
+  src: url('./fontes-texto/CatsFont-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PixelDart';
+  src: url('./fontes-texto/PixelDart.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+
+  background-color: rgb(42, 42, 42);
+
+}
+
+
+.box {
+  border: 3px solid #aebbbb;
+  padding: 20px;
+  margin: 10px;
+  background-image: url('image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1650px;
+  min-height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+
+}
+
+main {
+
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.conteudo {
+
+  text-align: center;
+
+
+
+}
+
+h1 {
+
+  color: rgb(213, 209, 231);
+  font-family: 'Cat Regular', sans-serif;
+  font-size: 30px;
+
+}
+
+
+
+.box2 {
+
+
+  padding: 20px;
+  margin: 10px;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 500px;
+  min-height: 10vh;
+  background-image: url(image\ copy.png);
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+
+}
+
+p {
+
+  color: #aebbbb;
+  font-size: 25px;
+  font-family: 'Cat Regular', sans-serif;
+
+}
+
+button {
+
+  width: 200px;
+
+  border: 2px solid rgb(184, 180, 199);
+
+  padding: 5px;
+
+  background-color: rgba(221, 231, 240, 0.6);
+
+  border-radius: 5%;
+
+  font-family: 'Cat Regular', sans-serif;
+
+}
+
+h2 {
+  color: rgb(157, 152, 177);
+  font-size: 40px;
+  font-family:  'PixelDart', sans-serif;
+
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+h2:hover {
+  color: rgb(116, 116, 116);
+}
+
+.butt {
+
+  margin-top: 8px;
+
+
+}
+
+
+.box3 {
+
+
+  padding: 20px;
+  margin: 10px;
+  width: 1000px;
+  min-height: 10vh;
+
+
+}
+
+.box5 {
+
+  border: 2px dashed #aebbbb;
+  padding: 20px;
+  margin: 10px;
+  background-size: cover;
+  background-position: center;
+  width: 1550px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+
+}
