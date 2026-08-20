@@ -1,8 +1,5 @@
-* {
 
-  overflow: hidden;
 
-}
 
 @font-face {
   font-family: 'Cat Regular';
@@ -11,12 +8,14 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: 'CatsFont Regular';
   src: url('./fontes-texto/CatsFont-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 
 @font-face {
   font-family: 'PixelDart';
@@ -28,12 +27,21 @@
 
 
 
+
+
+
+
 body {
+
 
   background-color: rgb(42, 42, 42);
 
 
+
+
 }
+
+
 
 
 .box {
@@ -44,15 +52,19 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1650px;
-  min-height: 90vh;
+  width: 175vmin;
+  min-height: 90vmin;
   flex-direction: column;
   align-items: center;
   display: flex;
 
+
 }
 
+
 main {
+
+
 
 
   display: flex;
@@ -60,32 +72,38 @@ main {
   flex-direction: column;
   align-items: center;
 
+
 }
+
 
 .conteudo {
-
   text-align: center;
-
-
 }
+
+
+
+
 
 
 
 
 .box2 {
 
+
   border: 2px dashed #aebbbb;
   padding: 20px;
   margin: 10px;
   background-size: cover;
   background-position: center;
-  width: 1550px;
-  min-height: 80vh;
+  width: 160vmin;
+  min-height: 80vmin;
   display: flex;
   align-items: center;
   flex-direction: column;
 
+
 }
+
 
 .conteudo2 li {
   list-style: none;
@@ -95,7 +113,9 @@ main {
   font-size: 20px;
 }
 
+
 .conteudo2 ul a {
+
 
   color: rgb(213, 209, 231);
   text-decoration: none;
@@ -104,40 +124,48 @@ main {
   font-size: 30px;
 
 
+
+
 }
+
+
+
+
 
 
 
 
 ul a:hover {
-
   color: whitesmoke;
   cursor: pointer;
-
 }
+
 
 .conteudo2 {
-
   padding: 20px;
-
 }
+
+
 
 
 .galeria1 {
   display: flex;
   grid-template-columns: repeat(auto-fit, minmax(4px, 1fr));
   gap: 16px;
-  max-width: 1000px;
+  max-width: 120vmin;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
 }
 
+
 .galeria1 img {
   width: 80%;
-  height: auto;
-  display: block;
+  height: 19vmin;
+  display: flex;
+  padding-left: 1px;
 }
+
 
 .facil {
   padding-left: 50px;
@@ -156,7 +184,9 @@ ul a:hover {
     padding-left: 1px;
     color:  rgb(213, 209, 231);
 
+
   }
+
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
@@ -164,6 +194,7 @@ ul a:hover {
     padding-left: 1px;
   }
 }
+
 
 .medio {
   padding-left: 50px;
@@ -182,7 +213,9 @@ ul a:hover {
     padding-left: 1px;
     color:  rgb(213, 209, 231);
 
+
   }
+
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
@@ -190,6 +223,7 @@ ul a:hover {
     padding-left: 1px;
   }
 }
+
 
 .dificil {
   padding-left: 50px;
@@ -208,7 +242,9 @@ ul a:hover {
     padding-left: 1px;
     color:  rgb(213, 209, 231);
 
+
   }
+
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
@@ -216,6 +252,7 @@ ul a:hover {
     padding-left: 1px;
   }
 }
+
 
 .box3 {
   padding: 20px;
@@ -234,20 +271,22 @@ ul a:hover {
   display: grid;
 }
 
+
 .box4 {
   padding: 20px;
   margin: 10px;
   width: 1000px;
   min-height: 10vh;
-  margin-top: 210px;
+  margin-top: 200px;
 }
+
 
 .facil:hover {
   width: 40vh;
-  height: 45vh;
+  height: 45vmin;
   cursor: pointer;
   background-color: rgba(167, 196, 167, 0.6);
-  
+ 
    p {
     font-size: 35px;
     margin-top: 1px;
@@ -255,23 +294,27 @@ ul a:hover {
     padding-left: 1px;
     color:  rgb(84, 65, 90);
 
+
   }
+
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
     color:  rgb(213, 209, 231);
     padding-left: 1px;
   }
-
-  
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.1);
 }
+
 
 .medio:hover {
   width: 40vh;
-  height: 45vh;
+  height: 45vmin;
   cursor: pointer;
   background-color: rgba(232, 235, 180, 0.6);
 
+
   p {
     font-size: 35px;
     margin-top: 1px;
@@ -279,20 +322,26 @@ ul a:hover {
     padding-left: 1px;
     color:  rgb(84, 65, 90);
 
+
   }
+
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
     color:  rgb(213, 209, 231);
     padding-left: 1px;
   }
+   transition: background-color 0.3s ease, transform 0.3s ease;
+    transform: scale(1.1);
 }
+
 
 .dificil:hover {
   width: 40vh;
-  height: 45vh;
+  height: 45vmin;
   cursor: pointer;
   background-color: rgba(223, 172, 168, 0.6);
+
 
   p {
     font-size: 35px;
@@ -301,11 +350,15 @@ ul a:hover {
     padding-left: 1px;
     color:  rgb(84, 65, 90);
 
+
   }
+
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
     color:  rgb(213, 209, 231);
     padding-left: 1px;
   }
+   transition: background-color 0.3s ease, transform 0.3s ease;
+   transform: scale(1.1);
 }

@@ -1,7 +1,5 @@
-* {
-  overflow: hidden;
 
-}
+
 
 @font-face {
   font-family: 'Cat Regular';
@@ -10,12 +8,14 @@
   font-style: normal;
 }
 
+
 @font-face {
   font-family: 'CatsFont Regular';
   src: url('./fontes-texto/CatsFont-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 
 @font-face {
   font-family: 'PixelDart';
@@ -24,30 +24,39 @@
   font-style: normal;
 }
 
+
 body {
+
 
   background-color: rgb(42, 42, 42);
 
+
 }
+
+
 
 
 .box {
   border: 3px solid #aebbbb;
   padding: 20px;
-  margin: 10px;
+  margin: 30px;
   background-image: url('image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 1650px;
-  min-height: 90vh;
+  width: 175vmin;
+  min-height: 90vmin;
   flex-direction: column;
   align-items: center;
   display: flex;
 
+
 }
 
+
 main {
+
+
 
 
   display: flex;
@@ -55,27 +64,41 @@ main {
   flex-direction: column;
   align-items: center;
 
+
 }
 
+
 .conteudo {
+
 
   text-align: center;
 
 
 
+
+
+
 }
 
+
 h1 {
+
 
   color: rgb(213, 209, 231);
   font-family: 'Cat Regular', sans-serif;
   font-size: 30px;
 
+
 }
 
 
 
+
+
+
 .box2 {
+
+
 
 
   padding: 20px;
@@ -89,58 +112,59 @@ h1 {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 
+
 }
 
+
 p {
+
 
   color: #aebbbb;
   font-size: 25px;
   font-family: 'Cat Regular', sans-serif;
 
+
 }
+
 
 button {
-
   width: 200px;
-
   border: 2px solid rgb(184, 180, 199);
-
   padding: 5px;
-
   background-color: rgba(221, 231, 240, 0.6);
-
   border-radius: 5%;
-
   font-family: 'Cat Regular', sans-serif;
-
 }
+
 
 h2 {
   color: rgb(157, 152, 177);
   font-size: 40px;
   font-family:  'PixelDart', sans-serif;
-
 }
+
 
 button:hover {
   cursor: pointer;
+  background-color: rgba(215, 224, 232, 0.7);
+   transition: background-color 0.3s ease, transform 0.3s ease;
+   transform: scale(1.001);
 }
+
 
 h2:hover {
   color: rgb(116, 116, 116);
 }
 
+
 .butt {
-
   margin-top: 8px;
-
-
 }
 
 
+
+
 .box3 {
-
-
   padding: 20px;
   margin: 10px;
   width: 1000px;
@@ -149,19 +173,18 @@ h2:hover {
 
 }
 
+
 .box5 {
+
 
   border: 2px dashed #aebbbb;
   padding: 20px;
   margin: 10px;
   background-size: cover;
   background-position: center;
-  width: 1550px;
-  min-height: 80vh;
+  width: 160vmin;
+  min-height: 80vmin;
   display: flex;
   align-items: center;
   flex-direction: column;
-
-
-
 }
