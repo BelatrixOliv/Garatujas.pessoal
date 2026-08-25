@@ -59,7 +59,10 @@ function gerenciarPerguntas() {
             nomeh1.style.color = "white"
             caixa.appendChild(nomeh1);
             alert("muito bem!")
+            etapaAtual++
         }
+    } else if (etapaAtual===2) {
+
     }
     
     
