@@ -2,12 +2,11 @@ const localPergunta = document.querySelector('label')
 const localTexto = document.getElementById('perg')
 const img = document.createElement('img')
 const botao = document.querySelector('button')
-const dica = document.querySelector('.dica')
 const caixa = document.querySelector('.box')
+const nomeh1 = document.createElement('h1')
+const paragrafoDadica = document.getElementById('textoDica')
 
-console.log(caixa)
 
-console.log(dica)
 
 const perguntas = [
     "para começar, adicione seu gatinho usando a tag <img>",
@@ -19,15 +18,16 @@ const perguntas = [
 let etapaAtual = 0;
 
 localPergunta.innerText = (perguntas[0])
-dica.innerText = 'DICA: Coloque no src o caminho da imagem: "/imgs/whatsapp image 2026-07-27 at 15.57.06.jpeg-photoroom.png"'
+paragrafoDadica.innerText = 'DICA: Coloque no src o caminho da imagem: "/imgs/whatsapp image 2026-07-27 at 15.57.06.jpeg-photoroom.png"'
 
 
 function gerenciarPerguntas() {
     let respostaDousuario = localTexto.value.trim().toLowerCase();
 
+
     if (respostaDousuario === "") {
         alert("Voce esqueceu de digitar!")
-        
+        return;
     }
 
     if (etapaAtual === 0) {
@@ -41,7 +41,7 @@ function gerenciarPerguntas() {
             alert("Muito bem!");
             localPergunta.innerText = (perguntas[1]);
             localTexto.value = "";
-            dica.innerText = 'Não se esqueça dos h!';
+            paragrafoDadica.innerText = 'Não se esqueça dos h!';
             etapaAtual++;
         }
         else {
@@ -54,20 +54,33 @@ function gerenciarPerguntas() {
         if (respostaDousuario.includes('<h1>')&&respostaDousuario.includes('</h1>')){
             respostaDousuario=respostaDousuario.replace(/<h1>/g, '')
             respostaDousuario=respostaDousuario.replace(/<\/h1>/g, '')
-            const nomeh1 = document.createElement('h1');
             nomeh1.textContent = respostaDousuario;
             nomeh1.style.color = "white"
             caixa.appendChild(nomeh1);
             alert("muito bem!")
+            localTexto.value = "";
+            localPergunta.innerText=(perguntas[2])
 
             etapaAtual++
+
         }
+
     } else if (etapaAtual===2) {
+        let corDousuario
 
-            etapaAtual++;
-        } else if (etapaAtual===2) {
+        if (respostaDousuario.includes('color:')&&respostaDousuario.includes(';')) {
+            console.log(corDousuario)
+            corDousuario = respostaDousuario.replace(/color:/g, '')
+            corDousuario = respostaDousuario.replace(/;/g, '')
+            console.log(corDousuario)
+            nomeh1.style.color = corDousuario
+            alert("Você está indo muito bem!")
+
+
+        }
         
-
+            etapaAtual++;
+    
     }
     
     

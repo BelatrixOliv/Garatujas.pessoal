@@ -1,4 +1,4 @@
-
+*{overflow: hidden;}
 
 
 @font-face {
@@ -26,104 +26,69 @@
 
 
 body {
-
-
   background-color: rgb(42, 42, 42);
-
-
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 5px;
 }
-
-
 
 
 .box {
   border: 3px solid #aebbbb;
   padding: 20px;
-  margin: 30px;
   background-image: url('image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 175vmin;
+  width: 170vmin;
   min-height: 90vmin;
   flex-direction: column;
   align-items: center;
   display: flex;
-
-
+  justify-content: center;
 }
 
 
 main {
-
-
-
-
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
-
 }
 
 
 .conteudo {
-
-
   text-align: center;
-
-
-
-
-
-
+ 
 }
 
 
 h1 {
-
-
   color: rgb(213, 209, 231);
   font-family: 'Cat Regular', sans-serif;
   font-size: 30px;
-
-
 }
 
 
-
-
-
-
 .box2 {
-
-
-
-
   padding: 20px;
   margin: 10px;
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 500px;
-  min-height: 10vh;
+  width: 24vmax;
+  height: 3vmax;
   background-image: url(image\ copy.png);
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-
-
 }
 
 
 p {
-
-
   color: #aebbbb;
   font-size: 25px;
   font-family: 'Cat Regular', sans-serif;
-
-
 }
 
 
@@ -162,29 +127,26 @@ h2:hover {
 }
 
 
-
-
 .box3 {
   padding: 20px;
   margin: 10px;
   width: 1000px;
   min-height: 10vh;
-
-
 }
 
 
 .box5 {
-
-
   border: 2px dashed #aebbbb;
   padding: 20px;
   margin: 10px;
   background-size: cover;
   background-position: center;
   width: 160vmin;
-  min-height: 80vmin;
+  height: 83vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-}
+  justify-content: center;
+ }
+
+

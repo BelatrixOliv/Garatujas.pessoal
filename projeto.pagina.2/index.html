@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animacao.css">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-     <script defer src="javascripts/main.js"></script>
+    <script defer src="javascripts/main.js"></script>
+    <script defer src="javascripts/animacao.js"></script>
     <title>CodeCat</title>
 </head>
 
@@ -24,13 +26,15 @@
                 <textarea id="perg" class="resposta"></textarea>
             </div>
             <div class="dica">
-                <p>DICA</p>
+                <p class="sumir" id="textoDica"></p>
+                <img class="lampada" src="../imgs/lampada.png" alt="">
+
             </div>
             <button id="pronto">PRONTO</button>
 
         </div>
     </main>
-   
+
 </body>
 
 </html>

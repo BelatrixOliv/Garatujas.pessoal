@@ -1,4 +1,4 @@
-
+*{overflow: hidden;}
 
 
 @font-face {
@@ -25,83 +25,51 @@
 }
 
 
-
-
-
-
-
-
 body {
-
-
   background-color: rgb(42, 42, 42);
-
-
-
-
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 1vmax;
 }
 
 
-
-
 .box {
-  border: 3px solid #d0d4d4;
+  border: 3px solid #aebbbb;
   padding: 20px;
-  margin: 10px;
   background-image: url('image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 175vmin;
+  width: 170vmin;
   min-height: 90vmin;
   flex-direction: column;
   align-items: center;
   display: flex;
-
-
+  justify-content: center;
 }
 
 
 main {
-
-
-
-
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
-
 }
-
-
-.conteudo {
-  text-align: center;
-}
-
-
-
-
-
-
 
 
 .box2 {
-
-
   border: 2px dashed #aebbbb;
   padding: 20px;
   margin: 10px;
   background-size: cover;
   background-position: center;
   width: 160vmin;
-  min-height: 80vmin;
+  height: 83vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-
-
+  justify-content: center;
 }
 
 
@@ -111,28 +79,18 @@ main {
   padding: 0;
   margin: 0;
   font-size: 20px;
+  padding-left: 1vmax;
+  padding-left: 1.2vmax;
 }
 
 
 .conteudo2 ul a {
-
-
   color: rgb(213, 209, 231);
   text-decoration: none;
   font-family: 'PixelDart', sans-serif;
   font-weight: bold;
   font-size: 30px;
-
-
-
-
 }
-
-
-
-
-
-
 
 
 ul a:hover {
@@ -141,11 +99,14 @@ ul a:hover {
 }
 
 
+
+
 .conteudo2 {
   padding: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 50vmax;
 }
-
-
 
 
 .galeria1 {
@@ -168,24 +129,32 @@ ul a:hover {
 
 
 .facil {
-  padding-left: 50px;
   border: dashed 3px  rgb(213, 209, 231);;
   width: 30vh;
-  height: 40vh;
+  height: 19.85vmax;
   background-color: rgba(84, 65, 90, 0.5);
   -size: 25px;
   margin-top: 2px;
   font-family: 'Cat Regular', sans-serif;
   border-radius: 2%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
    p {
     font-size: 35px;
     margin-top: 1px;
     font-family: 'PixelDart', sans-serif;
-    padding-left: 1px;
     color:  rgb(213, 209, 231);
 
 
+
+
   }
+
+
 
 
    h1 {
@@ -194,27 +163,37 @@ ul a:hover {
     padding-left: 1px;
   }
 }
+
+
 
 
 .medio {
-  padding-left: 50px;
   border: dashed 3px  rgb(213, 209, 231);;
   width: 30vh;
-  height: 40vh;
+  height: 19.85vmax;
   background-color: rgba(84, 65, 90, 0.5);
   -size: 25px;
   margin-top: 2px;
   font-family: 'Cat Regular', sans-serif;
   border-radius: 2%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 26px;
+  padding-right: 26px;
    p {
     font-size: 35px;
     margin-top: 1px;
     font-family: 'PixelDart', sans-serif;
-    padding-left: 1px;
     color:  rgb(213, 209, 231);
 
 
+
+
   }
+
+
 
 
    h1 {
@@ -223,27 +202,37 @@ ul a:hover {
     padding-left: 1px;
   }
 }
+
+
 
 
 .dificil {
-  padding-left: 50px;
   border: dashed 3px  rgb(213, 209, 231);;
   width: 30vh;
-  height: 40vh;
+  height: 19.85vmax;
   background-color: rgba(84, 65, 90, 0.5);
   -size: 25px;
   margin-top: 2px;
   font-family: 'Cat Regular', sans-serif;
   border-radius: 2%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
    p {
     font-size: 35px;
     margin-top: 1px;
     font-family: 'PixelDart', sans-serif;
-    padding-left: 1px;
     color:  rgb(213, 209, 231);
 
 
+
+
   }
+
+
 
 
    h1 {
@@ -252,6 +241,8 @@ ul a:hover {
     padding-left: 1px;
   }
 }
+
+
 
 
 .box3 {
@@ -261,7 +252,7 @@ ul a:hover {
   background-position: center center;
   background-repeat: no-repeat;
   width: 600px;
-  min-height: 10vh;
+  height: 5vmax;
   background-image: url(image\ copy\ 2.png);
   image-rendering: pixelated;
   image-rendering: crisp-edges;
@@ -272,20 +263,25 @@ ul a:hover {
 }
 
 
+
+
 .box4 {
   padding: 20px;
   margin: 10px;
   width: 1000px;
   min-height: 10vh;
-  margin-top: 200px;
+  margin-top: 10vmax;
 }
 
 
+
+
 .facil:hover {
-  width: 40vh;
-  height: 45vmin;
+
+
   cursor: pointer;
   background-color: rgba(167, 196, 167, 0.6);
+  border-color: rgb(84, 65, 90);
  
    p {
     font-size: 35px;
@@ -295,24 +291,31 @@ ul a:hover {
     color:  rgb(84, 65, 90);
 
 
+
+
   }
+
+
 
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
-    color:  rgb(213, 209, 231);
+    color:   rgb(84, 65, 90);
     padding-left: 1px;
   }
     transition: background-color 0.3s ease, transform 0.3s ease;
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
+
+
 
 
 .medio:hover {
-  width: 40vh;
-  height: 45vmin;
+
+
   cursor: pointer;
   background-color: rgba(232, 235, 180, 0.6);
+  border-color: rgb(84, 65, 90);
 
 
   p {
@@ -323,24 +326,30 @@ ul a:hover {
     color:  rgb(84, 65, 90);
 
 
+
+
   }
+
+
 
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
-    color:  rgb(213, 209, 231);
+    color:   rgb(84, 65, 90);
     padding-left: 1px;
   }
    transition: background-color 0.3s ease, transform 0.3s ease;
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 
+
+
 .dificil:hover {
-  width: 40vh;
-  height: 45vmin;
+ 
   cursor: pointer;
   background-color: rgba(223, 172, 168, 0.6);
+  border-color: rgb(84, 65, 90);
 
 
   p {
@@ -351,14 +360,18 @@ ul a:hover {
     color:  rgb(84, 65, 90);
 
 
+
+
   }
+
+
 
 
    h1 {
     font-family: 'Cat Regular', sans-serif;
-    color:  rgb(213, 209, 231);
+    color: rgb(84, 65, 90);
     padding-left: 1px;
   }
    transition: background-color 0.3s ease, transform 0.3s ease;
-   transform: scale(1.1);
+   transform: scale(1.08);
 }
