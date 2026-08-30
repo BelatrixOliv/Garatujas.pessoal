@@ -6,4 +6,14 @@ function dicaAparecer(){
     dica.classList.remove('sumir')
 }
 
+function brilhar() {
+    lampadaDadica.classList.add("brilhar")
+}
+
+function pararBrilhar() {
+    lampadaDadica.classList.remove("brilhar")
+}
+
+lampadaDadica.addEventListener('mouseleave', pararBrilhar)
+lampadaDadica.addEventListener('mouseover', brilhar)
 lampadaDadica.addEventListener('click', dicaAparecer)
