@@ -22,7 +22,7 @@ paragrafoDadica.innerText = 'DICA: Coloque no src o caminho da imagem: "/imgs/wh
 
 
 function gerenciarPerguntas() {
-    let respostaDousuario = localTexto.value.trim().toLowerCase();
+    let respostaDousuario = localTexto.value.replace(/\s+/g, '');
 
 
     if (respostaDousuario === "") {
@@ -34,7 +34,8 @@ function gerenciarPerguntas() {
 
         const respostaCerta1 = '<img src="/imgs/whatsapp image 2026-07-27 at 15.57.06.jpeg-photoroom.png"></img>'
 
-        if (respostaDousuario === respostaCerta1.trim().toLowerCase()) {
+        if (respostaDousuario === respostaCerta1.replace(/\s+/g, '')) {
+
             img.src = "/imgs/WhatsApp Image 2026-07-27 at 15.57.06.jpeg-Photoroom.png";
             document.querySelector('.box').appendChild(img);
 
@@ -52,6 +53,7 @@ function gerenciarPerguntas() {
     } else if (etapaAtual === 1) {
 
         if (respostaDousuario.includes('<h1>')&&respostaDousuario.includes('</h1>')){
+
             respostaDousuario=respostaDousuario.replace(/<h1>/g, '')
             respostaDousuario=respostaDousuario.replace(/<\/h1>/g, '')
             nomeh1.textContent = respostaDousuario;
@@ -60,26 +62,33 @@ function gerenciarPerguntas() {
             alert("muito bem!")
             localTexto.value = "";
             localPergunta.innerText=(perguntas[2])
+            paragrafoDadica.innerText = 'Deixe tudo em ingles!'
 
             etapaAtual++
 
+        } else {
+            alert("cheque se não esqueceu algum caractere!")
         }
 
     } else if (etapaAtual===2) {
-        let corDousuario
+       let corDousuario;
 
         if (respostaDousuario.includes('color:')&&respostaDousuario.includes(';')) {
+
             console.log(corDousuario)
-            corDousuario = respostaDousuario.replace(/color:/g, '')
-            corDousuario = respostaDousuario.replace(/;/g, '')
-            console.log(corDousuario)
+            respostaDousuario = respostaDousuario.replace(/color:/g, '')
+            respostaDousuario = respostaDousuario.replace(/;/g, '')
+            corDousuario = respostaDousuario
             nomeh1.style.color = corDousuario
             alert("Você está indo muito bem!")
+            localTexto.value = ""
+            
+
+            etapaAtual++;
 
 
         }
         
-            etapaAtual++;
     
     }
     
