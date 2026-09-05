@@ -1,11 +1,27 @@
 const lampadaDadica = document.querySelector(".lampada")
 const dica = document.getElementById('textoDica')
-console.log(lampadaDadica)
+const botaopronto = document.getElementById('pronto')
 
-function dicaAparecer(){
-    dica.classList.remove('sumir')
+let contador = 0;
+
+// fazer dica sumir e aparecer:
+function dicaAparecerEsumir(){
+
+    if (contador%2==0) {
+        dica.classList.remove('sumir')
+        contador++;
+    } else {
+        dica.classList.add('sumir')
+        contador++;
+    }
+    
 }
 
+function dicasumirCombotao () {
+      dica.classList.add('sumir')
+}
+
+//fazer lampada brilhar
 function brilhar() {
     lampadaDadica.classList.add("brilhar")
 }
@@ -16,4 +32,7 @@ function pararBrilhar() {
 
 lampadaDadica.addEventListener('mouseleave', pararBrilhar)
 lampadaDadica.addEventListener('mouseover', brilhar)
-lampadaDadica.addEventListener('click', dicaAparecer)
+lampadaDadica.addEventListener('click', dicaAparecerEsumir)
+botaopronto.addEventListener('click', dicasumirCombotao)
+
+
