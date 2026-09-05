@@ -9,21 +9,29 @@ const paragrafoDadica = document.getElementById('textoDica')
 
 
 const perguntas = [
-    "para começar, adicione seu gatinho usando a tag <img>",
-    "Agora adicione um nome para seu gatinho como um titulo principal",
-    "Vamos estilizar! mude a cor do nome do seu gatinho"
+    "Para começar, adicione seu gatinho usando a tag <img>",//0
+    "Agora adicione um nome para seu gatinho como um titulo principal",//1
+    "Vamos estilizar com CSS! Primeiro, comece selecionando o seu h1",//2
+    "Agora dentro do CSS do h1, use a propriedade: color"//3
 
 ]
 
 let etapaAtual = 0;
+let corDousuario;
+let respostaFixa;
+
+
+window.onload = function () {
+    localTexto.value = ""
+}
+
 
 localPergunta.innerText = (perguntas[0])
-paragrafoDadica.innerText = 'DICA: Coloque no src o caminho da imagem: "/imgs/whatsapp image 2026-07-27 at 15.57.06.jpeg-photoroom.png"'
+paragrafoDadica.innerText = 'DICA: Coloque no src o caminho da imagem: "./imgs/gatinho"'
 
 
 function gerenciarPerguntas() {
     let respostaDousuario = localTexto.value.replace(/\s+/g, '');
-
 
     if (respostaDousuario === "") {
         alert("Voce esqueceu de digitar!")
@@ -31,70 +39,104 @@ function gerenciarPerguntas() {
     }
 
     if (etapaAtual === 0) {
-
-        const respostaCerta1 = '<img src="/imgs/whatsapp image 2026-07-27 at 15.57.06.jpeg-photoroom.png"></img>'
+        const respostaCerta1 = '<img src="./imgs/gatinho"></img>'
 
         if (respostaDousuario === respostaCerta1.replace(/\s+/g, '')) {
 
             img.src = "/imgs/WhatsApp Image 2026-07-27 at 15.57.06.jpeg-Photoroom.png";
             document.querySelector('.box').appendChild(img);
-
             alert("Muito bem!");
             localPergunta.innerText = (perguntas[1]);
             localTexto.value = "";
-            paragrafoDadica.innerText = 'Não se esqueça dos h!';
             etapaAtual++;
+            paragrafoDadica.innerText = 'Não se esqueça dos h1 ou de fechar a tag ;)';
+
         }
         else {
             alert("Ops! voce deve ter esquecido algum caractere!")
         }
 
-
     } else if (etapaAtual === 1) {
 
-        if (respostaDousuario.includes('<h1>')&&respostaDousuario.includes('</h1>')){
 
-            respostaDousuario=respostaDousuario.replace(/<h1>/g, '')
-            respostaDousuario=respostaDousuario.replace(/<\/h1>/g, '')
+        if (respostaDousuario.includes('<h1>') && respostaDousuario.includes('</h1>')) {
+
+            respostaDousuario = respostaDousuario.replace(/<h1>/g, '')
+            respostaDousuario = respostaDousuario.replace(/<\/h1>/g, '')
             nomeh1.textContent = respostaDousuario;
             nomeh1.style.color = "white"
             caixa.appendChild(nomeh1);
             alert("muito bem!")
             localTexto.value = "";
-            localPergunta.innerText=(perguntas[2])
-            paragrafoDadica.innerText = 'Deixe tudo em ingles!'
+            localPergunta.innerText = (perguntas[2])
+            paragrafoDadica.innerText = 'Lembre-se: No CSS usamos o nome do elemento html ou a classe para seleciona-lo'
 
             etapaAtual++
 
         } else {
-            alert("cheque se não esqueceu algum caractere!")
+            alert("Cheque se não esqueceu algum caractere! você pode dar uma olhadinha na dica :D")
         }
 
-    } else if (etapaAtual===2) {
-       let corDousuario;
+    } else if (etapaAtual === 2) {
 
-        if (respostaDousuario.includes('color:')&&respostaDousuario.includes(';')) {
+        if (respostaDousuario.includes('h1{') && respostaDousuario.includes('}')) {
+            respostaFixa = respostaDousuario
+            localTexto.value = respostaFixa
+            alert("Ótimo! agora vamos para o próximo passo")
+            localPergunta.innerText = (perguntas[3])
+            paragrafoDadica.innerText = 'Lembre-se: no color, temos que colocar ":" depois do nome da propriedade e ";" para fechar ela'
+            etapaAtual++;
+
+        } else {
+            alert("Você deve ter esquecido algum caractere")
+
+        }
+
+    } else if (etapaAtual === 3) {
+
+        if (respostaDousuario.includes('color:') && respostaDousuario.includes(';')) {
+            if (respostaDousuario.includes('h1{') && respostaDousuario.includes('}')) {
+
+                respostaDousuario = respostaDousuario.replace(/color:/g, '', /;/g, '')
+                respostaDousuario = respostaDousuario.replace(/;/g, '')
+                respostaDousuario = respostaDousuario.replace(/h1{/g, '')
+                respostaDousuario = respostaDousuario.replace(/}/g, '')
+
+                alert("Muito bem! agora o nome do seu gatinho possui uma cor muito massa")
+                corDousuario = respostaDousuario
+                nomeh1.style.color = corDousuario
+                etapaAtual++;
+
+            } else {
+                alert("Não apague nada da sua resposta anterior! ela é crucial para essa parte funcionar.")
+            }
+        } else {
+            alert("Cheque se não esqueceu algum caractere!")
+        }
+
+    } else if (etapaAtual === 4) {
+        
+    }
+
+}
+
+botao.addEventListener("click", gerenciarPerguntas);
+
+
+/*   if (respostaDousuario.includes('color:') && respostaDousuario.includes(';')) {
 
             console.log(corDousuario)
             respostaDousuario = respostaDousuario.replace(/color:/g, '')
             respostaDousuario = respostaDousuario.replace(/;/g, '')
             corDousuario = respostaDousuario
             nomeh1.style.color = corDousuario
+
             alert("Você está indo muito bem!")
             localTexto.value = ""
-            
 
             etapaAtual++;
 
-
+        } else {
+            alert("você deve ter esquecido de adicionar as chaves ou selecionar seu h1!")
         }
-        
-    
-    }
-    
-    
-}
-
-botao.addEventListener("click", gerenciarPerguntas);
-
-
+    } */
