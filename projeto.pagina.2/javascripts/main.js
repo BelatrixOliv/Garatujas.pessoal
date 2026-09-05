@@ -11,9 +11,13 @@ const paragrafoDadica = document.getElementById('textoDica')
 const perguntas = [
     "Para começar, adicione seu gatinho usando a tag <img>",//0
     "Agora adicione um nome para seu gatinho como um titulo principal",//1
+    //mesme pergunta:
     "Vamos estilizar com CSS! Primeiro, comece selecionando o seu h1",//2
-    "Agora dentro do CSS do h1, use a propriedade: color"//3
-
+    "Agora dentro do CSS do h1, use a propriedade: 'color'",//3
+    //------------------------------------------------------------------------
+    //mesma pergunta:
+    "Vamos estilizar de novo com CSS, selecione a caixa que seu gatinho está. use a classe: '.box'",//4
+    "Agora vamos mudar a cor do background, use a propriedade: 'color' novamente" //5
 ]
 
 let etapaAtual = 0;
@@ -39,6 +43,7 @@ function gerenciarPerguntas() {
     }
 
     if (etapaAtual === 0) {
+
         const respostaCerta1 = '<img src="./imgs/gatinho"></img>'
 
         if (respostaDousuario === respostaCerta1.replace(/\s+/g, '')) {
@@ -58,7 +63,6 @@ function gerenciarPerguntas() {
 
     } else if (etapaAtual === 1) {
 
-
         if (respostaDousuario.includes('<h1>') && respostaDousuario.includes('</h1>')) {
 
             respostaDousuario = respostaDousuario.replace(/<h1>/g, '')
@@ -70,7 +74,6 @@ function gerenciarPerguntas() {
             localTexto.value = "";
             localPergunta.innerText = (perguntas[2])
             paragrafoDadica.innerText = 'Lembre-se: No CSS usamos o nome do elemento html ou a classe para seleciona-lo'
-
             etapaAtual++
 
         } else {
@@ -80,9 +83,9 @@ function gerenciarPerguntas() {
     } else if (etapaAtual === 2) {
 
         if (respostaDousuario.includes('h1{') && respostaDousuario.includes('}')) {
+            alert("Ótimo! agora vamos para o próximo passo")
             respostaFixa = respostaDousuario
             localTexto.value = respostaFixa
-            alert("Ótimo! agora vamos para o próximo passo")
             localPergunta.innerText = (perguntas[3])
             paragrafoDadica.innerText = 'Lembre-se: no color, temos que colocar ":" depois do nome da propriedade e ";" para fechar ela'
             etapaAtual++;
@@ -105,6 +108,8 @@ function gerenciarPerguntas() {
                 alert("Muito bem! agora o nome do seu gatinho possui uma cor muito massa")
                 corDousuario = respostaDousuario
                 nomeh1.style.color = corDousuario
+                localPergunta.innerText = (perguntas[4])
+                paragrafoDadica.innerText = "Aqui é a mesma lógica de mudar a cor do nome, a diferença é que ao invés de h1, usamos o .box"
                 etapaAtual++;
 
             } else {
@@ -115,9 +120,37 @@ function gerenciarPerguntas() {
         }
 
     } else if (etapaAtual === 4) {
-        
-    }
 
+        if (respostaDousuario.includes('.box{') && respostaDousuario.includes('}')) {
+            alert("Isso mesmo! agora vamos para o próximo passo")
+            respostaFixa = respostaDousuario
+            localTexto.value = respostaFixa
+            localPergunta.innerText = (perguntas[5])
+            paragrafoDadica.innerText = 'Lembre-se: color: sua cor aqui;'
+            etapaAtual++;
+        }
+    } else if (etapaAtual === 5) {
+
+        if (respostaDousuario.includes('background-color:')&&respostaDousuario.includes(';')) {
+            if (respostaDousuario.includes('.box{')&&respostaDousuario.includes('}')) {
+
+                respostaDousuario = respostaDousuario.replace(/background-color:/g, '')
+                respostaDousuario = respostaDousuario.replace(/;/g, '')
+                respostaDousuario = respostaDousuario.replace(/\.box{/g, '')
+                respostaDousuario = respostaDousuario.replace(/}/g, '')
+
+                alert("Você está indo muito bem!")
+                corDousuario = respostaDousuario
+                caixa.style.backgroundColor = corDousuario
+
+            } else {
+                alert("Não apague nada da sua resposta anterior! ela é crucial para essa parte funcionar.")
+            }
+        } else {
+            alert("Cheque se não esqueceu algum caractere!")
+        }
+
+    }
 }
 
 botao.addEventListener("click", gerenciarPerguntas);
