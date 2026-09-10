@@ -9,7 +9,7 @@ cliquesm = 0;
 cliquesd = 0;
 cliquesf++;
 if(cliquesf == 2){
-    window.location.href="https://opulent-space-cod-pjx7rr4ggv55h6wvv-5518.app.github.dev/projeto.pagina.2/"
+    window.location.href="http://127.0.0.1:5518/projeto.pagina.2/index.html"
     cliquesf=0;
 }
 }

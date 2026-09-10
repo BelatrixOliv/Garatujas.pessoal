@@ -79,7 +79,6 @@ main {
   padding: 0;
   margin: 0;
   font-size: 20px;
-  padding-left: 1vmax;
   padding-left: 1.2vmax;
 }
 
@@ -105,7 +104,8 @@ ul a:hover {
   padding: 20px;
   align-items: center;
   justify-content: center;
-  height: 50vmax;
+  height: clamp(200px, 50vmax, 1000px);
+ 
 }
 
 
@@ -117,6 +117,7 @@ ul a:hover {
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
+  height: 22vmax;
 }
 
 
@@ -131,7 +132,7 @@ ul a:hover {
 .facil {
   border: dashed 3px  rgb(213, 209, 231);;
   width: 30vh;
-  height: 22vmax;
+  height: clamp(200px,22vmax, 400px);
   background-color: rgba(84, 65, 90, 0.5);
   -size: 25px;
   margin-top: 2px;
@@ -170,7 +171,7 @@ ul a:hover {
 .medio {
   border: dashed 3px  rgb(213, 209, 231);;
   width: 30vh;
-  height: 22vmax;
+  height: clamp(200px,22vmax, 400px);
   background-color: rgba(84, 65, 90, 0.5);
   -size: 25px;
   margin-top: 2px;
@@ -209,7 +210,7 @@ ul a:hover {
 .dificil {
   border: dashed 3px  rgb(213, 209, 231);;
   width: 30vh;
-  height: 22vmax;
+  height: clamp(200px,22vmax, 400px);
   background-color: rgba(84, 65, 90, 0.5);
   -size: 25px;
   margin-top: 2px;
@@ -266,11 +267,11 @@ ul a:hover {
 
 
 .box4 {
-  padding: 20px;
+  padding: 10px;
   margin: 10px;
   width: 1000px;
-  min-height: 10vh;
-  margin-top: 10vmax;
+  height: 1000px;
+  margin-top: clamp(200px, 200px, 200px);
 }
 
 
@@ -375,3 +376,5 @@ ul a:hover {
    transition: background-color 0.3s ease, transform 0.3s ease;
    transform: scale(1.08);
 }
+
+
