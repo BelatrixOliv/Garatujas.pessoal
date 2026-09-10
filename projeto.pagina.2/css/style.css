@@ -6,6 +6,11 @@
 }
 
 
+*{
+    overflow: hidden;
+}
+
+
 body {
   background-color: rgb(42, 42, 42);
   align-items: center;
@@ -65,8 +70,8 @@ width: 45vmin;
 background-image: url(/imgs/tv.png);
 display: flex;
 flex-direction: column;
-padding-left: 3.4vmax;
-padding-top: 3.6vmax;
+padding-left: 3.5vmax;
+padding-top:3.6vmax;
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat;
@@ -87,8 +92,8 @@ background-repeat: no-repeat;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30%;
-    width: 50%;
+    height: 35%;
+    width: 60%;
 }
 
 
@@ -116,24 +121,24 @@ background-repeat: no-repeat;
 
 
 .perguntas label {
-    font-size: 1.6vmax;
+    font-size: clamp(0.5rem, 1.6vmax, 35px);
     padding: 10px;
     border-radius: 3px;
-    margin-top: 20px;
+    margin-top: 6px;
     font-family: 'PixelDart', sans-serif;
     text-align: center;
     color: rgb(250, 250, 250);
+    height: 11vmin;
+    width: 95vmin;
 }
 
 
 textarea {
     width: 60vmin;
-    height: 15vmin;
+    height: 10vmin;
     border: solid 0px black;
     box-shadow: 7px 0px black, -7px 0px black, 0px -5px black, 0px 5px black, 12px 7px rgb(80, 78, 78);
     resize: none;
-
-
 }
 
 
@@ -147,15 +152,6 @@ textarea {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.minhaDiv {
-    border: solid 3px white;
-    height: 70%;
-    width: 70%;
-    padding: 0;
-    margin: 0;
-
 }
 
 
@@ -184,14 +180,28 @@ textarea {
 
 
 button {
-    margin-top: 10px;
+    margin-top: 0.6vmax;
     background-color: rgb(45, 55, 114);
     color: white;
-    font-size: 16px;
+    font-size: 0.7vmax;
     cursor: pointer;
+    height: 3.5vmin;
 }
 
 
 .escondido {
     display: none;
 }
+
+
+
+
+ .minhaDiv {
+    border: solid 3px white;
+    height: 70%;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+
+}
+
